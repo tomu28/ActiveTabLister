@@ -21,36 +21,46 @@ const MyButton = styled(({ color, ...other }) => <Button {...other} />)({
     margin: 8,
 });
 
+const MyQR = styled(({ color, ...other }) => <Button disabled={true} {...other} />)({
+    border: 0,
+    borderRadius: 3,
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+    margin: 8,
+});
+
 export default function AdaptingStyledComponents({value}) {
     return (
         <React.Fragment>
-            <MyButton
-                size="small"
-                onClick={() => chrome.tabs.remove(value.Red)}
-                color="red">Delete</MyButton>
-
-            <MyButton
-                color="blue"
-                onMouseOver={() => {value.mouseOverHandling()}}
-                onMouseOut={() => {value.mouseOutHandling()}}
-                >
-                QRコードを表示
-                {renderQrCode(value.Qr, value.Blue)}
-            </MyButton>
+            <>
+                <MyButton
+                    size="small"
+                    onClick={() => chrome.tabs.remove(value.Red)}
+                    color="red">Delete</MyButton>
+                <MyButton
+                    color="blue"
+                    onMouseOver={() => {value.mouseOverHandling()}}
+                    onMouseOut={() => {value.mouseOutHandling()}}
+                    >
+                    QRコードを表示
+                </MyButton>
+                <MyQR>
+                    {renderQrCode(value.Qr, value.Blue)}
+                </MyQR>
+            </>
         </React.Fragment>
     );
 }
 
 const renderQrCode = (showQr, url) => {
     if (showQr) {
-        //TODO
-        // QR表示ボタンが移動しないようにすること
         return (
-                <QRCode value={url} size="30"/>
+            <>
+                <QRCode value={url} size="48"/>
+            </>
         )
     }
     return (
-    <div>
-        <br/>
-    </div>)
+        <></>)
 };
