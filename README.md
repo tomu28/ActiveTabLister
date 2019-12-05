@@ -8,8 +8,8 @@
 
 ## 開発時のデバッグ
 
-Chrome拡張の開発では、[React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=ja)が使用できないので、  
-[`debugger;`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debuggerhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)などを使用すると良い
+- Chrome拡張の開発では、[React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=ja)が使用できないので、[`debugger;`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debuggerhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)などを使用すると良い
+- 検証でChrome DevToolsは使用できる
 
 ## License
 MIT
