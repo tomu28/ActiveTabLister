@@ -57,7 +57,7 @@ const renderQrCode = (showQr, url) => {
     if (showQr) {
         return (
             <>
-                <QRCode value={url} size="48"/>
+                <QRCode value={url} size="32"/>
             </>
         )
     }
