@@ -45,12 +45,6 @@ class Items extends React.Component {
         chrome.windows.getAll({populate:true},(winData) => {getAllOpenWindows(winData, this)});
     };
 
-    // Stateの値が変わるたび、更新する
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     return !(this.state.count === nextState.count &&
-    //         this.props.sampleProp === this.props.SampleProp);
-    // }
-
     render() {
 
         return(
@@ -108,7 +102,7 @@ class Items extends React.Component {
                 </Typography>
 
             </div>
-        );//TODO 文字合わせ
+        );
     }
 }
 
