@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Active Tab Lister",
+  "short_name": "Tab Lister",
+  "description": "Chromeの開いているタブを一覧表示し、削除・URL表示が行えます。",
+  "version": "1.0.0",
+  "browser_action": {
+    "default_title": "Active Tab Lister",
+    "default_popup": "./index.html"
+  },
+  "icons": {
+    "16":"list16x16.png",
+    "48":"list48x48.png",
+    "128":"list128x128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "windows"
+  ],
+  "content_security_policy": "script-src 'self' 'sha256-yXWZxmxCVrpp441pWijkdPhNXFnGXsXHWcGgT4zuq50='"
+}
